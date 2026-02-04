@@ -1,0 +1,15 @@
+# 1. Activation du moteur de réécriture
+RewriteEngine On
+
+# 2. Sécurité et encodage
+Options -Indexes
+AddDefaultCharset UTF-8
+
+# 3. Supprimer le slash final (évite bug de CSS)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# 4. Cacher l'extension .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

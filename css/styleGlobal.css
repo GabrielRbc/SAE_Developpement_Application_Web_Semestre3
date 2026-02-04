@@ -1,0 +1,427 @@
+/*=== contenu global ===*/
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f7fb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.info {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.info-valeur {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.action-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.25s;
+    overflow: hidden;
+}
+
+.action-card:hover i {
+    transition: transform 0.5s ease;
+    transform: scale(1.2);
+}
+
+.menu-item,
+.form-select {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    outline: none;
+    width: 100%;
+    text-align: left;
+    text-align-last: center;
+}
+
+.menu-item:hover,
+.form-select:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.form-select:focus {
+    border-color: #888;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.form-select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23999' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 8px 10px;
+}
+
+.icon-box {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.icon-box i {
+    line-height: 1;
+}
+
+.icon-blue {
+    background: linear-gradient(135deg, #4facfe, #00c6ff);
+}
+
+.icon-orange {
+    background: linear-gradient(135deg, #ff9a3d, #ff6a00);
+}
+
+.icon-purple {
+    background: linear-gradient(135deg, #9f7aea, #6b46c1);
+}
+
+.icon-green {
+    background: linear-gradient(135deg, #43e97b, #38c172);
+}
+
+.icon-teal {
+    background: linear-gradient(135deg, #2dd4bf, #0d9488);
+}
+
+.icon-red {
+    background: linear-gradient(135deg, #ff3d3d, #ff6a6a);
+}
+
+.icon-gray {
+    background: linear-gradient(135deg, #64748b, #334155);
+}
+.icon-valider {
+    background: linear-gradient(135deg, #8deb95, #8deb95);
+}
+
+.icon-refuser {
+    background: linear-gradient(135deg, #ff6767, #ff6767);
+}
+
+.navbar form {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .btn {
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    flex: 1; /* Fait pousser le contenu pour que le footer descende */
+}
+
+footer {
+    margin-top: auto; /* Colle le footer en bas */
+}
+
+/*=== index.php ===*/
+
+.bg-light-blue {
+    /* Couleur d'arrière-plan très claire et légèrement bleutée */
+    background-color: #f0f4f9;
+}
+
+.login-container {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.login-form-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* Bords arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.form-label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.form-control {
+    height: 48px;
+    border-radius: 8px;
+    border-color: #dee2e6;
+}
+
+.form-control:focus {
+    border-color: #6650FA;
+    box-shadow: 0 0 0 0.25rem rgba(102, 80, 250, 0.25);
+}
+
+.btn-primary {
+    /* Couleur primaire du bouton (le violet de l'image) */
+    background-color: #6650FA;
+    border-color: #6650FA;
+    font-weight: 600;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #5540e8;
+    border-color: #5540e8;
+}
+
+.title-main {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle-main {
+    color: #6c757d;
+}
+
+/*=== gestion_roles.php ===*/
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/*=== parametre_association.php ===*/
+
+#logo-upload-box.logo-uploaded {
+    background-color: #e6ffed; /* Fond vert très clair */
+    border-color: #4CAF50 !important; /* Bordure verte */
+}
+
+#logo-upload-box.logo-uploaded .upload-icon {
+    color: #4CAF50 !important; /* Icône verte */
+}
+
+#logo-upload-box.logo-uploaded #logo-file-name {
+    color: #4CAF50 !important; /* Texte vert */
+    font-weight: bold;
+}
+
+/*=== personnaliser_formulaire.php ===*/
+
+.champ {
+    background: lightgray;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.grasSouligne {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    gap: 15px;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.btn-switch {
+    flex: 1;
+    border: none;
+    background: #f0f0f0;
+    padding: 10px 0;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.btn-switch.active {
+    background: #007bff;
+    color: white;
+}
+
+.option-card {
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 15px;
+    flex: 1 1 280px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.btn-sm,
+.dropdown-toggle.btn-sm {
+    height: 38px;             /* même hauteur partout */
+    line-height: 1.4;         /* centrage du texte */
+    display: flex;
+    align-items: center;
+    padding: 0 14px;          /* uniformise la largeur interne */
+}
+
+.badge-obligatoire {
+    display: inline-block;
+    background-color: #dc3545; /* rouge Bootstrap */
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin-left: 6px;
+    text-transform: uppercase;
+}
+
+.info {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+.section-header {
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: #6c757d;
+    border-left: 3px solid #dee2e6;
+    margin: 15px 0 10px 0;
+}
+.badge-option {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.btn-xs {
+    padding: 0.1rem 0.4rem;
+    font-size: 0.75rem;
+}
+
+/*=== impExp.php ===*/
+
+.option-card.active {
+    border-color: #007bff;
+    background: #eef5ff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.option-card p {
+    font-size: 13px;
+    margin: 0;
+    color: #555;
+}
+
+.import-instructions {
+    background: #eef6ff;
+    border-left: 4px solid #007bff;
+}
+
+/*=== Politique de confidentialité ===*/
+
+.btn-user {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+}
+
+.btn-user:hover {
+    background-color: white;
+    color: black;
+}
+
+/*=== fiche_adherent ===*/
+
+/* Indique que le document a été validé */
+.badge-valid {
+    background-color: #198754;
+}
+
+/* Indique que le document est en attente de validation */
+.badge-wait {
+    background-color: #ffc107; color: #000;
+}
+
+/* Indique que le document a été refusée */
+.badge-refuse {
+    background-color: #dc3545;
+}
+
+/* Définit l'aspect de la zone de dépôt */
+.upload-zone {
+    position: relative;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.upload-zone:hover {
+    background-color: #f8f9fa;
+    border-color: #0d6efd;
+}
+
+/* Rend l'input de fichier invisible mais reste fonctionnel */
+.file-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.upload-zone.file-selected {
+    border: 2px dashed #198754;
+    background-color: #f6fff9;
+}
+
+.upload-zone.file-selected i,
+.upload-zone.file-selected span {
+    color: #198754;
+}

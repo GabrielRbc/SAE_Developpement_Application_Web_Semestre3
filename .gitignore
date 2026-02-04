@@ -1,0 +1,12 @@
+# Ignorer les fichiers PhpStorm
+.idea/
+
+# Ignorer les fichiers système
+Thumbs.db
+
+# Ignorer les fichiers sensibles de config
+config.php
+.env
+
+# Ignorer le dossier uploads
+uploads/

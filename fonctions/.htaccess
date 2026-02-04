@@ -1,0 +1,2 @@
+# Interdire l'accès direct à ce dossier depuis le Web
+Deny from all
